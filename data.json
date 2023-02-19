@@ -59,7 +59,7 @@
                     "required_information" : "",
                     "text_place": "As you look on your left you see an oldsafe on the ground.",
                     "text_place_taken": "As you look at the open safe the open safe is look back at you.",
-                    "text_item": "",
+                    "text_item": "Coins from the safe.",
                     "text_look": "The safe needs a key.",
                     "text_look_taken": "The safe is empty",
                     "text_unlock": "You open the safe with the key. The safe contained coins."
