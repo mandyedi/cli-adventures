@@ -1,0 +1,20 @@
+{
+    "places": [
+        {
+            "place_id": "place_1",
+            "name": "Starting point",
+            "visited": "False",
+            "text": "Welcome!",
+            "items": ["shell", "wood"],
+            "adjacent_places": ["jungle"]
+        },
+        {
+            "place_id": "place_2",
+            "name": "Second place",
+            "visited": "False",
+            "text": "Welcome!",
+            "items": ["item"],
+            "adjacent_places": []
+        }
+    ]
+}

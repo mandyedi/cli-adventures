@@ -1,0 +1,116 @@
+{
+    "combinations": [
+        {
+            "items": ["item1", "item2"],
+            "new_item": "item12",
+            "text": "Mixing item1 and item2 gives you item12"
+        }
+    ],
+    "places": [
+        {
+            "name": "startplace",
+            "visited": false,
+            "text": "Welcome Outlander!\nYou arrived at your destination: a deserted island.\nYou are standing on a sandy beach.",
+            "items": [
+                {
+                    "name": "item1",
+                    "text": "This is item 1."
+                },
+                {
+                    "name": "item2",
+                    "text": "This is item 2."
+                }
+            ],
+            "interactables" : [
+                {
+                    "name": "ground",
+                    "item": "knife",
+                    "taken": false,
+                    "information": "",
+                    "required_item": "",
+                    "required_information" : "",
+                    "text_place": "You see something shiny on the ground.",
+                    "text_place_taken": "There is just garbage on the ground.",
+                    "text_item": "A knife from the beach.",
+                    "text_look": "As you look closely you find a knife in the sand.",
+                    "text_look_taken": "It's just sand. I don't have time to build a sand castle.",
+                    "text_unlock": ""
+                },
+                {
+                    "name": "paper",
+                    "item": "",
+                    "taken": false,
+                    "information": "Go staight on, turn right twice then turn left.",
+                    "required_item": "",
+                    "required_information" : "",
+                    "text_place": "There is a paper in the sand.",
+                    "text_place_taken": "There is just more garbage in the sand.",
+                    "text_item": "",
+                    "text_look": "As you look closely, you realize that the paper is a map.",
+                    "text_look_taken": "It's just sand. I don't have time to build a sand castle.",
+                    "text_unlock": "You take the map."
+                },
+                {
+                    "name": "safe",
+                    "item": "coins",
+                    "taken": false,
+                    "information": "",
+                    "required_item": "key",
+                    "required_information" : "",
+                    "text_place": "As you look on your left you see an oldsafe on the ground.",
+                    "text_place_taken": "As you look at the open safe the open safe is look back at you.",
+                    "text_item": "",
+                    "text_look": "The safe needs a key.",
+                    "text_look_taken": "The safe is empty",
+                    "text_unlock": "You open the safe with the key. The safe contained coins."
+                },
+                {
+                    "name": "box",
+                    "item": "spoon",
+                    "taken": false,
+                    "information": "",
+                    "required_item": "",
+                    "required_information" : "jeremy",
+                    "text_place": "There is a misterious box in front of you.",
+                    "text_place_taken": "The box lying in front of you is not misterious anymore.",
+                    "text_item": "A rusty spoon.",
+                    "text_look": "As you examine it you realize that it needs a password.",
+                    "text_look_taken": "The box is empty",
+                    "text_unlock": "The box contained a rusty_spoon. It is strange, but I like rusty spoons."
+                }
+            ],
+            "adjacent_places": [
+                {
+                    "name": "place2",
+                    "text": "There is a path into the jungle."
+                }
+            ]
+        },
+        {
+            "name": "place2",
+            "visited": false,
+            "text": "This is place 2.",
+            "items": [
+                {
+                    "name": "key",
+                    "text": "An old key, seems like it can open something very old."
+                }
+            ],
+            "interactables" : [],
+            "adjacent_places": [
+                {
+                    "name": "startplace",
+                    "text": "The beach where your journey started."
+                }
+            ]
+        },
+        {
+            "name": "",
+            "visited": false,
+            "text": "",
+            "items": [],
+            "interactables" : [],
+            "adjacent_places": []
+        }
+    ]
+}
