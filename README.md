@@ -26,18 +26,6 @@
     e.g. player wants to go to a non-existent place: (What?) (I'm afraid that is not possible!)
   - use text from favorite games
 
-https://stackoverflow.com/a/15882054  
-```python
-import json
-from types import SimpleNamespace
-
-data = '{"name": "John Smith", "hometown": {"name": "New York", "id": 123}}'
-
-# Parse JSON into an object with attributes corresponding to dict keys.
-x = json.loads(data, object_hook=lambda d: SimpleNamespace(**d))
-print(x.name, x.hometown.name, x.hometown.id)
-```
-
 ## Favorite Texts
 ### Commandos
 I'm afraid that is not possible!  
