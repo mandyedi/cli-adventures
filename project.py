@@ -1,6 +1,6 @@
 import json
 from types import SimpleNamespace
-
+import game_text as gt
 
 game_run = True
 backpack = []
@@ -39,28 +39,25 @@ def print_places_around():
 def action_go(game_data, *args):
     global current_place
     if len(args) == 0:
-        print("And how am I supposed to go nowhere?")
+        print(gt.action_go_no_args)
     else:
         if args[0] == current_place.name:
-            print("You are exactly there.")
+            print(gt.action_go_current_place)
             return
 
         adjacent_places = [place.name for place in current_place.adjacent_places]
         if args[0] not in adjacent_places:
-            print("I'm afraid this place is not around here.")
+            print(gt.action_go_not_adjacent)
             return
 
         place = get_place_by_name(args[0], game_data)
-        if place == None:
-            print("And where the hell is this place?")
-        else:
-            current_place.visited = False
-            current_place = place
+        current_place.visited = False
+        current_place = place
 
 
 def action_look(game_data, *args):
     if len(args) == 0:
-        print("I can look at nothing, but only if I'm meditating.\n")
+        print(gt.get_random_text(gt.action_look_no_args))
         return
     
     subject_to_look = args[0]
@@ -114,15 +111,15 @@ def action_look(game_data, *args):
                             interactable.information = ""
                             interactable.taken = True
             return
-    print("I can't look at something that isn't there.")
+    print(gt.get_random_text(gt.action_look_unkown_object))
 
 
 def action_take(game_data, *args):
-    if len(current_place.items) == 0:
-        print("There is nothing to take here... only air... take as much as you need. :)")
-        return
     if len(args) == 0:
-        print("I can't take the nothing.")
+        print(gt.get_random_text(gt.action_take_no_args))
+        return
+    elif len(current_place.items) == 0:
+        print(gt.get_random_text(gt.action_take_no_items))
         return
     
     item_to_take = args[0]
@@ -135,34 +132,32 @@ def action_take(game_data, *args):
             taken = True
             break
     if taken == False:
-        print("This item does not exist here.")
+        print(gt.get_random_text(gt.action_take_no_match))
 
 
 def action_backpack(game_data, *args):
     if len(backpack) > 0:
-        print("Your backpack contains the following items:")
+        print(gt.action_backpack)
         for item in backpack:
             print(f"- {item}")
     else:
-        print("Your backpack is empty")
-    print("")
+        print(gt.action_backpack_empty)
 
 
 def action_notes(game_data, *args):
     if len(notes) > 0:
-        print("Your notes:")
+        print(gt.action_notes)
         for note in notes:
             print(f"- {note}")
     else:
-        print("You don't have any notes.")
-    print("")
+        print(gt.action_notes_empty)
 
 
 def action_use(game_data, *args):
     if len(args) == 0:
-        print("How am I supposed to use the nothing?")
+        print(gt.action_use_no_args)
     elif len(args) == 1:
-        print("What am I supposed to do with it?")
+        print(gt.action_use_one_arg)
     elif len(args) == 2:
         if args[0] in backpack and args[1] not in backpack:
             # use <item> <interactable>
@@ -182,9 +177,9 @@ def action_use(game_data, *args):
                         interactable.information = ""
                         interactable.taken = True
                 else:
-                    print(f"I can't use {args[0]} with {args[1]}")
+                    print(gt.action_use_cannot.format(arg0=args[0], arg1=args[1]))
             else:
-                print(f"I can't use {args[0]} with {args[1]}")
+                print(gt.action_use_cannot.format(arg0=args[0], arg1=args[1]))
         elif args[0] in backpack and args[1] in backpack:
             # use <item1> <item2>
             combinations = game_data.combinations
@@ -198,44 +193,11 @@ def action_use(game_data, *args):
                     combinations.pop(combination_index)
                     break
         else:
-            print("I don't think it is a good idea.")  
+            print(gt.action_use_no_items)  
 
 
 def action_help(game_data, *args):
-    help = """go
-    go <place>
-    You can go to places adjacent to your current location.
-
-look
-    look <item>
-    look around
-    You can examine items at current place.
-
-take
-    take <item>
-    You may take items at current place.
-
-backpack
-    backpack
-    You can see the content of your backpack.
-
-use
-    use <item>
-    use <item1> <item2>
-    use <item> <interactable>
-    You may use item at current place or combine items to get something new.
-    You can use item with interactables in a place. Look for hints in a place's description.
-
-help
-    help
-    Get this description, but you already figured that out. ;)
-
-exit
-    exit
-    exit y
-    You can quit the game. Note that the game process is not saved.
-"""
-    print(help)
+    print(gt.action_help)
 
 
 def action_exit(game_data, *args):

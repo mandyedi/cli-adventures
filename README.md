@@ -16,15 +16,14 @@
 - [ ] Execute submit50 command  
 
 ## Ideas:
+- move data.json to test_data.json, rename data.json to data_beta.json
+- do I need global current_place?
+  do I need to pass dame_data to actions? isn't current_place enough?
 - Use http://www.figlet.org/examples.html to print fancy ASCII art logo
 - random start point from multiple startplaces
   have a different list in game data for them
 - save game
-- text refactor
-  - move texts to a different file (help, random texts, etc.)
-  - multiple text and choose randomly
-    e.g. player wants to go to a non-existent place: (What?) (I'm afraid that is not possible!)
-  - use text from favorite games
+- collect text from favorite games
 
 ## Favorite Texts
 ### Commandos
@@ -32,6 +31,8 @@ I'm afraid that is not possible!
 ### Morrowind
 Welcome Outlander!  
 ### Star Craft
+### Monkey Island
+
 
 ## References
 Salad Fingers: rusty spoon, Hubert Cumberdale, Marjory Stewart-Baxter, and Jeremy Fisher

@@ -23,6 +23,11 @@ take <intem>
 backpack
 ```
 
+### notes
+```
+notes
+```
+
 ### use
 ```
 use <item1> <item2>
