@@ -1,3 +1,4 @@
+from sys import argv
 import json
 from types import SimpleNamespace
 import game_text as gt
@@ -8,7 +9,7 @@ notes = []
 current_place = {}
 
 PROMPT = ">:"
-GAME_DATA = "data.json"
+GAME_DATA = "data_beta.json"
 
 def print_interactables():
     for interactable in current_place.interactables:
@@ -276,7 +277,12 @@ def process_user_input():
 
 def main():
     global current_place
-    game_data = get_game_data(GAME_DATA)
+
+    data_file = GAME_DATA
+    if len(argv) == 2:
+        data_file = argv[1]
+    game_data = get_game_data(data_file)
+    
     current_place = get_place_by_name("startplace", game_data)
     # TODO: print welcome text, CLS Adventures or something like that
 
