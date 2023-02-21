@@ -2,6 +2,7 @@ from sys import argv
 import json
 from types import SimpleNamespace
 import game_text as gt
+from pyfiglet import Figlet
 
 game_run = True
 backpack = []
@@ -284,7 +285,9 @@ def main():
     game_data = get_game_data(data_file)
     
     current_place = get_place_by_name("startplace", game_data)
-    # TODO: print welcome text, CLS Adventures or something like that
+
+    f = Figlet(font="big")
+    print(f.renderText("CLI Adventures"))
 
     while game_run:
         if current_place.visited == False:
