@@ -289,6 +289,8 @@ def main():
     f = Figlet(font="big")
     print(f.renderText("CLI Adventures"))
 
+    print(game_data.text_intro, "\n")
+
     while game_run:
         if current_place.visited == False:
             current_place.visited = True

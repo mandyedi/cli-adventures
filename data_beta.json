@@ -1,4 +1,5 @@
 {
+    "text_intro": "Welcome Outlander!\nYou arrived at your destination: a deserted island.",
     "combinations": [
         {
             "items": ["item1", "item2"],
@@ -10,7 +11,7 @@
         {
             "name": "startplace",
             "visited": false,
-            "text": "Welcome Outlander!\nYou arrived at your destination: a deserted island.\nYou are standing on a sandy beach.",
+            "text": "You are standing on a sandy beach.",
             "items": [
                 {
                     "name": "item1",
