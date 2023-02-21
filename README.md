@@ -18,8 +18,16 @@
 ## Ideas:
 - do I need global current_place?
   do I need to pass dame_data to actions? isn't current_place enough?
+  OR
+  ```
+  game_context = {
+      "game_data": game_data,
+      "current_place": current_place (or key of current place)
+  }
+  ```
 - random start point from multiple startplaces
   have a different list in game data for them
+- make backpack and notes part of game_data
 - save game
 - collect text from favorite games
 
