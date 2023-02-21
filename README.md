@@ -16,7 +16,6 @@
 - [ ] Execute submit50 command  
 
 ## Ideas:
-- move data.json to test_data.json, rename data.json to data_beta.json
 - do I need global current_place?
   do I need to pass dame_data to actions? isn't current_place enough?
 - Use http://www.figlet.org/examples.html to print fancy ASCII art logo
