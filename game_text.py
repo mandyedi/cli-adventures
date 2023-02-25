@@ -73,24 +73,29 @@ action_help = """go
     You can go to places adjacent to your current location.
 
 look
-    look <item>
     look around
-    You can examine items at current place.
+    look <item>
+    look <interactable>
+    You can examine items or interactables at current place.
 
 take
     take <item>
-    You may take items at current place.
+    You can take items at current place.
 
 backpack
     backpack
     You can see the content of your backpack.
 
+notes
+    notes
+    You can see the content of you notes.    
+
 use
     use <item>
     use <item1> <item2>
     use <item> <interactable>
-    You may use item at current place or combine items to get something new.
-    You can use item with interactables in a place. Look for hints in a place's description.
+    You can use item at current place or combine items to get something new.
+    You can use item with an interactables. Look for hints in a place's description.
 
 help
     help
