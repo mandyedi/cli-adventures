@@ -16,6 +16,14 @@
 - [ ] Execute submit50 command  
 
 ## Ideas:
+- Use pyscript to run the game on the web
+  - https://github.com/pyscript/pyscript
+  - https://stackoverflow.com/a/72093922
+  - actions return string
+  - separate game.py and engine.py
+    engine only returns strings
+  - engine is used from game.py and game.html too
+  - fix pyfiglet issue: not supported by pyscript
 - do I need global current_place?
   do I need to pass game_data to actions? isn't current_place enough?
   OR
