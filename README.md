@@ -17,7 +17,7 @@
 
 ## Ideas:
 - do I need global current_place?
-  do I need to pass dame_data to actions? isn't current_place enough?
+  do I need to pass game_data to actions? isn't current_place enough?
   OR
   ```
   game_context = {
@@ -42,3 +42,4 @@ Welcome Outlander!
 
 ## References
 Salad Fingers: rusty spoon, Hubert Cumberdale, Marjory Stewart-Baxter, and Jeremy Fisher
+The Dark Tower: riddles

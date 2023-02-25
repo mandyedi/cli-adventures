@@ -1,117 +1,128 @@
 {
-    "text_intro": "Welcome Outlander!\nYou arrived at your destination: a deserted island.",
-    "combinations": [
-        {
-            "items": ["item1", "item2"],
-            "new_item": "item12",
-            "text": "Mixing item1 and item2 gives you item12"
-        }
-    ],
+    "text_intro": "Welcome, Outlander!\nYou arrived at your destination: a desert island. Your grandfather gave you the coordinates of this placa but unfortunately couldn't tell more information. It is up to you to find the treasure.",
+    "combinations": [],
+    "place_start": "beach",
     "places": [
         {
-            "name": "startplace",
+            "name": "beach",
             "visited": false,
             "text": "You are standing on a sandy beach.",
             "items": [
                 {
-                    "name": "item1",
-                    "text": "This is item 1."
-                },
-                {
-                    "name": "item2",
-                    "text": "This is item 2."
+                    "name": "pot",
+                    "text": "Just an old leaky pot."
                 }
             ],
             "interactables" : [
                 {
-                    "name": "ground",
-                    "item": "knife",
-                    "taken": false,
+                    "name": "sand",
+                    "item": "machete",
                     "information": "",
                     "required_item": "",
                     "required_information" : "",
-                    "text_place": "You see something shiny on the ground.",
-                    "text_place_taken": "There is just garbage on the ground.",
-                    "text_item": "A knife from the beach.",
-                    "text_look": "As you look closely you find a knife in the sand.",
+                    "taken": false,
+                    "text_place": "You see something shiny in the sand.",
+                    "text_place_taken": "You see regular beach sand around you.",
+                    "text_item": "A machete from the beach.",
+                    "text_look": "As you look closely you find a machete in the sand.",
                     "text_look_taken": "It's just sand. I don't have time to build a sand castle.",
                     "text_unlock": ""
                 },
                 {
-                    "name": "paper",
+                    "name": "bottle",
                     "item": "",
-                    "taken": false,
-                    "information": "Go staight on, turn right twice then turn left.",
+                    "information": "What goes all the way around the world but ...",
                     "required_item": "",
                     "required_information" : "",
-                    "text_place": "There is a paper in the sand.",
-                    "text_place_taken": "There is just more garbage in the sand.",
+                    "taken": false,
+                    "text_place": "There is a bottle in the sand. It seems like it contains something.",
+                    "text_place_taken": "There is an empty bottle in the sand.",
                     "text_item": "",
-                    "text_look": "As you look closely, you realize that the paper is a map.",
-                    "text_look_taken": "It's just sand. I don't have time to build a sand castle.",
-                    "text_unlock": "You take the map."
-                },
-                {
-                    "name": "safe",
-                    "item": "coins",
-                    "taken": false,
-                    "information": "",
-                    "required_item": "key",
-                    "required_information" : "",
-                    "text_place": "As you look on your left you see an oldsafe on the ground.",
-                    "text_place_taken": "As you look at the open safe the open safe is look back at you.",
-                    "text_item": "Coins from the safe.",
-                    "text_look": "The safe needs a key.",
-                    "text_look_taken": "The safe is empty",
-                    "text_unlock": "You open the safe with the key. The safe contained coins."
-                },
-                {
-                    "name": "box",
-                    "item": "spoon",
-                    "taken": false,
-                    "information": "",
-                    "required_item": "",
-                    "required_information" : "jeremy",
-                    "text_place": "There is a misterious box in front of you.",
-                    "text_place_taken": "The box lying in front of you is not misterious anymore.",
-                    "text_item": "A rusty spoon.",
-                    "text_look": "As you examine it you realize that it needs a password.",
-                    "text_look_taken": "The box is empty",
-                    "text_unlock": "The box contained a rusty_spoon. It is strange, but I like rusty spoons."
+                    "text_look": "As you look closely you find a paper in the bottle. There is something written on it. You write it down in your notes.",
+                    "text_look_taken": "You added the text to you notes. You don't need the bottle anymore.",
+                    "text_unlock": ""
                 }
             ],
             "adjacent_places": [
                 {
-                    "name": "place2",
-                    "text": "There is a path into the jungle."
+                    "name": "jungle",
+                    "text": "There is a path leading to the jungle."
                 }
             ]
         },
         {
-            "name": "place2",
+            "name": "jungle",
             "visited": false,
-            "text": "This is place 2.",
+            "text": "As you enter the jungle you find yourself at an entirely different place. Though you are not far from the beach you can't here the sound of waves anymore. Instead you hear different animals from the deep jungle. This island is not deserted at all, leastwise by animals.",
             "items": [
                 {
-                    "name": "key",
-                    "text": "An old key, seems like it can open something very old."
+                    "name": "necklace",
+                    "text": "A very expensive golden necklace."
                 }
             ],
-            "interactables" : [],
+            "interactables" : [
+                {
+                    "name": "plants",
+                    "item": "",
+                    "information": "... stays in a corner?",
+                    "required_item": "machete",
+                    "required_information" : "",
+                    "taken": false,
+                    "text_place": "The plants are very dense on your left. It's very likely that they are covering something.",
+                    "text_place_taken": "There are plants everywhere around you.",
+                    "text_item": "",
+                    "text_look": "There is something behind the plants but you can't get any closer because it's too dense.",
+                    "text_look_taken": "Now you see cleary, the stone lies there with the carvings in it.",
+                    "text_unlock": "You find a big stone behind the plants. It has some text carved in it. You write it down in your notes."
+                }
+            ],
             "adjacent_places": [
                 {
-                    "name": "startplace",
+                    "name": "beach",
                     "text": "The beach where your journey started."
+                },
+                {
+                    "name": "house",
+                    "text": "An old house. It seems no one has been around for ages."
                 }
             ]
         },
         {
-            "name": "",
+            "name": "house",
             "visited": false,
-            "text": "",
-            "items": [],
-            "interactables" : [],
-            "adjacent_places": []
+            "text": "You are standing in a very old wooden house. There are dust and old used stuff everywhere. It seems like no one has been here for ages.",
+            "items": [
+                {
+                    "name": "hat",
+                    "text": "An old hat hanged on a coat stand."
+                },
+                {
+                    "name": "shovel",
+                    "text": "A rusty shovel leaning against the wall."
+                }
+            ],
+            "interactables" : [
+                {
+                    "name": "door",
+                    "item": "treasure",
+                    "information": "",
+                    "required_item": "",
+                    "required_information" : "stamp",
+                    "taken": false,
+                    "text_place": "There's a strange door on your right.",
+                    "text_place_taken": "There is nothing interesting here anymore.",
+                    "text_item": "The big treasure your grandfather told you.",
+                    "text_look": "This door has a very unique lock. It's a mechanic lock and you need give it a password.",
+                    "text_look_taken": "The door is open, the treasure has been found.",
+                    "text_unlock": "With many clicking and sliding sounds the door slowly opens. You are very happy to realize that the treasure you've been seeking is behind the door.\nCongratulations! You are finished with CLI Adventures Beta version.\nTo be continued..."
+                }
+            ],
+            "adjacent_places": [
+                {
+                    "name": "jungle",
+                    "text": "You barely see through the dense plants."
+                }
+            ]
         }
     ]
 }

@@ -284,7 +284,7 @@ def main():
         data_file = argv[1]
     game_data = get_game_data(data_file)
     
-    current_place = get_place_by_name("startplace", game_data)
+    current_place = get_place_by_name(game_data.place_start, game_data)
 
     f = Figlet(font="big")
     print(f.renderText("CLI Adventures"))
